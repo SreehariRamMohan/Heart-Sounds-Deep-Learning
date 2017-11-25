@@ -76,7 +76,7 @@ def process(dataset, hrw,
     plotter(dataset, "My Heartbeat Plot")
 
 import AnalyzingHeartbeatForBPM as hb #Assuming we named the file 'heartbeat.py'
-dataset = hb.get_data("/Users/sreeharirammohan/Desktop/Fast Fourier Transforms/foo.csv")
+dataset = hb.get_data("/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/foo.csv")
 hb.process(dataset, 0.75, 100)
 #We have imported our Python module as an object called 'hb'
 #This object contains the dictionary 'measures' with all values in it
