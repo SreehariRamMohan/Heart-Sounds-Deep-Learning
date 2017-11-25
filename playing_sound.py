@@ -4,6 +4,7 @@ import pyaudio
 import wave
 import sys
 
+
 CHUNK = 1024
 
 wf = wave.open("/Users/sreeharirammohan/Desktop/piano2.wav", 'rb')
