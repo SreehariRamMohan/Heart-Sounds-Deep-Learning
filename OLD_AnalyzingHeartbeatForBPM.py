@@ -1,3 +1,4 @@
+import datetime
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
@@ -11,10 +12,10 @@ def get_data(filename):
 
 
 def rolmean(dataset, hrw, fs):
-    mov_avg = pd.rolling_mean(dataset.hart, window=(int(hrw * fs)))
+    mov_avg = pd.rolling_mean(dataset.hart, window=(int(hrw*fs)))
     avg_hr = (np.mean(dataset.hart))
     mov_avg = [avg_hr if math.isnan(x) else x for x in mov_avg]
-    #mov_avg = [x * 1.2 for x in mov_avg]
+    #mov_avg = [x*1.2 for x in mov_avg]
     dataset['hart_rollingmean'] = mov_avg
 
 
@@ -77,6 +78,14 @@ def calc_ts_measures():
     measures['pnn20'] = float(len(NN20)) / float(len(RR_diff))
     measures['pnn50'] = float(len(NN50)) / float(len(RR_diff))
 
+def get_sample_rate(dataset):
+    # Simple way to get sample rate
+    sampletimer = [x for x in dataset.timer]  # dataset.timer is a ms counter with start of recording at '0'
+    measures['fs'] = ((len(sampletimer) / sampletimer[
+        -1]) * 1000)  # Divide total length of dataset by last timer entry. This is in ms, so multiply by 1000 to get Hz value
+
+    print("Measures fs is = " + str(measures['fs']))
+
 
 #Don't forget to update our process() wrapper to include the new function
 def process(dataset, hrw, fs):
@@ -98,20 +107,47 @@ def plotter(dataset, title):
     plt.legend(loc=4, framealpha=0.6)
     plt.show()
 
+
+from scipy.signal import butter, lfilter  # Import the extra module required
+
+# Define the filter
+def butter_lowpass(cutoff, fs, order=5):
+    nyq = 0.5 * fs  # Nyquist frequeny is half the sampling frequency
+    normal_cutoff = cutoff / nyq
+    b, a = butter(order, normal_cutoff, btype='low', analog=False)
+    return b, a
+
+
+def butter_lowpass_filter(data, cutoff, fs, order):
+    b, a = butter_lowpass(cutoff, fs, order=order)
+    y = lfilter(b, a, data)
+    return y
+
+
+dataset = get_data('/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/data2.csv')
+dataset = dataset[6000:12000].reset_index(
+    drop=True)  # For visibility take a subselection of the entire signal from samples 6000 - 12000 (00:01:00 - 00:02:00)
+
+filtered = butter_lowpass_filter(dataset.hart, 2.5, 100.0,
+                                 5)  # filter the signal with a cutoff at 2.5Hz and a 5th order Butterworth filter
+
+# Plot it
+plt.subplot(211)
+plt.plot(dataset.hart, color='Blue', alpha=0.5, label='Original Signal')
+plt.legend(loc=4)
+plt.subplot(212)
+plt.plot(filtered, color='Red', label='Filtered Signal')
+plt.ylim(200,
+         800)  # limit filtered signal to have same y-axis as original (filter response starts at 0 so otherwise the plot will be scaled)
+plt.legend(loc=4)
+plt.show()
+
+
+
 import AnalyzingHeartbeatForBPM as hb #Assuming we named the file 'heartbeat.py'
-dataset = hb.get_data("/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/foo.csv")
+dataset = hb.get_data("/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/data2.csv")
+get_sample_rate(dataset)
 hb.process(dataset, 0.75, 100)
-#We have imported our Python module as an object called 'hb'
-#This object contains the dictionary 'measures' with all values in it
-#Now we can also retrieve the BPM value (and later other values) like this:
-bpm = hb.measures['bpm']
-#The module dict now contains all the variables computed over our signal:
-hb.measures['bpm']
-hb.measures['ibi']
-hb.measures['sdnn']
-#etcetera
 
-#Remember that you can get a list of all dictionary entries with "keys()":
-
-#To view all objects in the dictionary, use "keys()" like so:
-print(hb.measures.keys())
+for key, value in hb.measures.items():
+    print(str(key) + " ==> " + str(value))
