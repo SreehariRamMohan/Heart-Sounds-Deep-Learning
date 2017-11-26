@@ -12,11 +12,11 @@ df.to_csv(RAW_CSV_NAME, index=False, header="hart" )
 
 # print("Sampling frequency " + str(fs))
 hrdata = hb.get_data(RAW_CSV_NAME, column_name = 'hart')
-'''
+measures = hb.process(data, 100)
+
 print(measures['bpm']) #returns BPM value
 print(measures['lf/hf']) # returns LF:HF ratio
 
 #Alternatively, use dictionary stored in module:
 print(hb.measures['bpm']) #returns BPM value
 print(hb.measures['lf/hf']) # returns LF:HF ratio
-'''
