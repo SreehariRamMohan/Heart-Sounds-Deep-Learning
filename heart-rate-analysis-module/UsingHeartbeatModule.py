@@ -5,8 +5,8 @@ import pandas as pd
 
 
 RAW_CSV_NAME = "/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/pls.csv"
-fs, data = wav.read('/Users/sreeharirammohan/Desktop/heart_sounds/all-normal-wav/b0007.wav')
-df = pd.DataFrame(data)
+fs, data = wav.read('/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/Sreehari_heartbeat.wav')
+df = pd.DataFrame(data[:, 0])
 df.columns=['hart']
 df.to_csv(RAW_CSV_NAME, index=False, header="hart" )
 

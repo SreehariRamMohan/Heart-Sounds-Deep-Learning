@@ -47,9 +47,9 @@ class Project_GUI(tk.Tk):
         self.CHANNELS = 2
         self.RATE = 44100
         self.RECORD_SECONDS = 30
-        self.WAVE_OUTPUT_FILENAME = "/Users/sreeharirammohan/Desktop/Python Gui's/temp/output_test.wav"
-        self.CARDIOGRAM_OUTPUT_FILENAME = "/Users/sreeharirammohan/Desktop/Python Gui's/temp/cardiogram.jpg"
-        self.MEL_SPECTROGRAM_OUTPUT_FILENAME = "/Users/sreeharirammohan/Desktop/Python Gui's/temp/mel-spectrogram.jpg"
+        self.WAVE_OUTPUT_FILENAME = "/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/Sreehari_heartbeat.wav"
+        self.CARDIOGRAM_OUTPUT_FILENAME = "/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/cardiogram.jpg"
+        self.MEL_SPECTROGRAM_OUTPUT_FILENAME = "/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/mel-spectrogram.jpg"
         self.image_reference_1 = None
         self.image_reference_2 = None
         self.image_list = []
