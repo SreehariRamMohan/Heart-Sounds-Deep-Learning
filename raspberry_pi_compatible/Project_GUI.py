@@ -288,11 +288,11 @@ class Project_GUI(tk.Tk):
         self.get_prediction_thread.start()
 
 
-    def convert_spectrogram_to_numpy(path_to_spectrogram):
+    def convert_spectrogram_to_numpy(self, path_to_spectrogram):
         img = io.imread(path_to_spectrogram)
         return img
 
-    def create_model(weights_path=None):
+    def create_model(self, weights_path=None):
         model = Sequential()
         model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=(3, 640, 480)))
         print("fail")
