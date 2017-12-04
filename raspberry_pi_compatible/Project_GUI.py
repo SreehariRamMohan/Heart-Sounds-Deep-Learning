@@ -35,6 +35,22 @@ import librosa.display
 import numpy as np
 import matplotlib.pyplot as plt
 
+#imports needed for making a prediction
+from sklearn.model_selection import train_test_split
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+from keras.layers.convolutional import Conv2D
+from keras.layers.pooling import MaxPooling2D
+from keras.optimizers import SGD
+from keras import backend as K
+from keras.utils import np_utils
+from keras.models import Sequential
+from keras.layers.core import Flatten, Dense, Dropout
+from keras.layers.convolutional import Convolution2D, MaxPooling2D, ZeroPadding2D
+from keras.optimizers import SGD
+import keras
+import h5py
+
 
 class Project_GUI(tk.Tk):
 
@@ -275,6 +291,23 @@ class Project_GUI(tk.Tk):
     def convert_spectrogram_to_numpy(path_to_spectrogram):
         img = io.imread(path_to_spectrogram)
         return img
+
+    def create_model(weights_path=None):
+        model = Sequential()
+        model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=(3, 640, 480)))
+        print("fail")
+        model.add(Conv2D(64, (3, 3), activation='relu', dim_ordering="th"))
+        print("fail2")
+
+        model.add(MaxPooling2D(pool_size=(2, 2)))
+        model.add(Dropout(0.25))
+        model.add(Flatten())
+        model.add(Dense(128, activation='relu'))
+        model.add(Dropout(0.5))
+        model.add(Dense(2, activation='softmax'))
+        if weights_path:
+            model.load_weights(weights_path)
+        return model
 
 
     def get_prediction(self):
