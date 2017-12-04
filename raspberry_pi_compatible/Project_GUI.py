@@ -51,6 +51,102 @@ from keras.optimizers import SGD
 import keras
 import h5py
 
+#Extra imports I need to cut these down later
+import pyaudio
+import wave
+import numpy
+import matplotlib.pyplot as plt
+import pylab
+from scipy.io import wavfile
+from scipy.fftpack import fft
+from pydub import AudioSegment
+from PIL import Image
+import io
+import wave, os, glob
+import soundfile as sf
+import os
+from os.path import basename
+import soundfile
+import numpy as np
+np.random.seed(123)  # for reproducibility
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.utils import np_utils
+import os
+import numpy
+import re
+from skimage import io
+import glob
+import numpy as np
+import _pickle as cPickle
+import pickle
+from PIL import Image
+from sklearn.model_selection import train_test_split
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+from keras.layers.convolutional import Conv2D
+from keras.layers.pooling import MaxPooling2D
+from keras.optimizers import SGD
+from keras import backend as K
+from keras.utils import np_utils
+from keras.models import Sequential
+from keras.layers.core import Flatten, Dense, Dropout
+from keras.layers.convolutional import Convolution2D, MaxPooling2D, ZeroPadding2D
+from keras.optimizers import SGD
+import keras
+import h5py
+import os
+import numpy
+import re
+from skimage import io
+import glob
+import numpy as np
+import _pickle as cPickle
+import pickle
+from PIL import Image
+from sklearn.model_selection import train_test_split
+import os
+import numpy
+import re
+from skimage import io
+import glob
+import numpy as np
+import _pickle as cPickle
+import pickle
+from PIL import Image
+from sklearn.model_selection import train_test_split
+from scipy.io import wavfile
+import matplotlib.pyplot as plt
+import os
+import numpy
+import re
+from skimage import io
+import glob
+import numpy as np
+import _pickle as cPickle
+import pickle
+from PIL import Image
+from sklearn.model_selection import train_test_split
+#below dependencies required for mel-spectrogram
+import os
+import matplotlib
+matplotlib.use('Agg') # No pictures displayed 
+import pylab
+import librosa
+import librosa.display
+import numpy as np
+
+#below dependencies required for mel-spectrogram
+import os
+import matplotlib
+matplotlib.use('Agg') # No pictures displayed 
+import pylab
+import librosa
+import librosa.display
+import numpy as np
+
+
 
 class Project_GUI(tk.Tk):
 
@@ -178,7 +274,7 @@ class Project_GUI(tk.Tk):
         frames = []
 
         for i in range(0, int(self.RATE / self.CHUNK * self.RECORD_SECONDS)):
-            data = stream.read(self.CHUNK)
+            data = stream.read(self.CHUNK, exception_on_overflow = False)
             frames.append(data)
 
         print("* done recording")
@@ -200,11 +296,6 @@ class Project_GUI(tk.Tk):
 
         self.create_mel_spectrogram_thread = threading.Thread(target=self.create_mel_spectrogram, daemon=True)
         self.create_mel_spectrogram_thread.start()
-
-
-
-
-
 
     def create_cardiogram(self):
         # Read file and get sampling freq [ usually 44100 Hz ]  and sound object
@@ -266,9 +357,6 @@ class Project_GUI(tk.Tk):
 
         self.showImage(300, 200, self.CARDIOGRAM_OUTPUT_FILENAME, self, 2)
 
-
-
-
     def create_mel_spectrogram(self):
         sig, fs = librosa.load(self.WAVE_OUTPUT_FILENAME)
         # make pictures name
@@ -310,10 +398,9 @@ class Project_GUI(tk.Tk):
             model.load_weights(weights_path)
         return model
 
-
     def get_prediction(self):
-        model = create_model(self.KERAS_WEIGHT_FILE)
-        numpy_image_from_spectrogram = np.array(convert_spectrogram_to_numpy(self.MEL_SPECTROGRAM_OUTPUT_FILENAME))
+        model = self.create_model(self.KERAS_WEIGHT_FILE)
+        numpy_image_from_spectrogram = np.array(self.convert_spectrogram_to_numpy(self.MEL_SPECTROGRAM_OUTPUT_FILENAME))
         numpy_image_from_spectrogram = np.swapaxes(numpy_image_from_spectrogram, 2, 0)
         numpy_image_from_spectrogram = numpy_image_from_spectrogram[None, ...]
         prediction = model.predict_classes(numpy_image_from_spectrogram)
