@@ -50,7 +50,7 @@ class Project_GUI(tk.Tk):
         self.WAVE_OUTPUT_FILENAME = "/home/pi/Desktop/Sreehari_heartbeat.wav"
         self.CARDIOGRAM_OUTPUT_FILENAME = "/home/pi/Desktop/cardiogram.jpg"
         self.MEL_SPECTROGRAM_OUTPUT_FILENAME = "/home/pi/Desktop/mel-spectrogram.jpg"
-        self.KERAS_WEIGHT_FILE = "/home/pi/Desktop/heart-files/weights-best-031-0.88735.hdf5"
+        self.KERAS_WEIGHT_FILE = "/home/pi/Desktop/weights-best-031-0.88735.hdf5"
         self.image_reference_1 = None
         self.image_reference_2 = None
         self.image_list = []
@@ -188,6 +188,8 @@ class Project_GUI(tk.Tk):
 
 
 
+
+
     def create_cardiogram(self):
         # Read file and get sampling freq [ usually 44100 Hz ]  and sound object
         samplingFreq, mySound = wavfile.read(self.WAVE_OUTPUT_FILENAME)
@@ -265,12 +267,26 @@ class Project_GUI(tk.Tk):
 
         self.showImage(200, 150, self.MEL_SPECTROGRAM_OUTPUT_FILENAME, self, 1)
 
+        #Now that we created the mel-spectrogram we can use multi-threading to get the prediction for the patient
+        self.get_prediction_thread = threading.Thread(target=self.get_prediction, daemon=True)
+        self.get_prediction_thread.start()
+
+
+    def convert_spectrogram_to_numpy(path_to_spectrogram):
+        img = io.imread(path_to_spectrogram)
+        return img
+
+
     def get_prediction(self):
-        model = create_model('/Users/sreeharirammohan/Desktop/check_point_models/weights-best-031-0.88735.hdf5')
-
-
-
-
+        model = create_model(self.KERAS_WEIGHT_FILE)
+        numpy_image_from_spectrogram = np.array(convert_spectrogram_to_numpy(self.MEL_SPECTROGRAM_OUTPUT_FILENAME))
+        numpy_image_from_spectrogram = np.swapaxes(numpy_image_from_spectrogram, 2, 0)
+        numpy_image_from_spectrogram = numpy_image_from_spectrogram[None, ...]
+        prediction = model.predict_classes(numpy_image_from_spectrogram)
+        if(prediction[0] == 0):
+            print("Heartbeat NORMAL")
+        else:
+            print("Heartbeat ABNORMAL")
 
 app = Project_GUI()
 app.mainloop()
