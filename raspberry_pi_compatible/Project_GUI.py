@@ -284,8 +284,9 @@ class Project_GUI(tk.Tk):
         self.showImage(200, 150, self.MEL_SPECTROGRAM_OUTPUT_FILENAME, self, 1)
 
         #Now that we created the mel-spectrogram we can use multi-threading to get the prediction for the patient
-        self.get_prediction_thread = threading.Thread(target=self.get_prediction, daemon=True)
-        self.get_prediction_thread.start()
+        #self.get_prediction_thread = threading.Thread(target=self.get_prediction, daemon=True)
+        #self.get_prediction_thread.start()
+        self.get_prediction()
 
 
     def convert_spectrogram_to_numpy(self, path_to_spectrogram):
