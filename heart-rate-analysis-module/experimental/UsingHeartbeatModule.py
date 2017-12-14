@@ -5,12 +5,12 @@ import pandas as pd
 
 
 RAW_CSV_NAME = "/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/pls.csv"
-fs, data = wav.read('/Users/sreeharirammohan/Desktop/output_test.wav')
-df = pd.DataFrame(data)
-df.columns=['hart']
-df.to_csv(RAW_CSV_NAME, index=False, header="hart" )
+fs, data = wav.read('/Users/sreeharirammohan/Desktop/TensorFlow_Programs/Heart-Sounds-Deep-Learning/Sreehari_heartbeat.wav')
+#df = pd.DataFrame(data)
+#df.columns=['hart']
+#df.to_csv(RAW_CSV_NAME, index=False, header="hart" )
 
-print("Sampling frequency " + str(fs))
+#print("Sampling frequency " + str(fs))
 hrdata = hb.get_data(RAW_CSV_NAME, column_name = 'hart')
 measures = hb.process(data, 44100)
 
