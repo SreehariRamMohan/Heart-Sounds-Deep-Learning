@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ac0680-9e40-478c-b314-8c174d827454" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/heart-rate-analysis-module/experimental/Finding_BPM_From_Wav.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,9 +82,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="103" />
-    <option name="y" value="183" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="568" />
+    <option name="y" value="152" />
     <option name="width" value="1328" />
     <option name="height" value="803" />
   </component>
@@ -206,7 +205,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="103" y="183" width="1328" height="803" extended-state="0" />
+    <frame x="568" y="152" width="1328" height="803" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21539658" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
