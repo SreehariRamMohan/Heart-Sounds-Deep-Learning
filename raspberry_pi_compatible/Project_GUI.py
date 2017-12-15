@@ -131,7 +131,7 @@ from sklearn.model_selection import train_test_split
 #below dependencies required for mel-spectrogram
 import os
 import matplotlib
-matplotlib.use('Agg') # No pictures displayed 
+matplotlib.use('Agg') # No pictures displayed
 import pylab
 import librosa
 import librosa.display
@@ -140,7 +140,7 @@ import numpy as np
 #below dependencies required for mel-spectrogram
 import os
 import matplotlib
-matplotlib.use('Agg') # No pictures displayed 
+matplotlib.use('Agg') # No pictures displayed
 import pylab
 import librosa
 import librosa.display
@@ -349,7 +349,6 @@ class Project_GUI(tk.Tk):
         print("trying to save")
         plt.savefig(self.CARDIOGRAM_OUTPUT_FILENAME)
         print("saved")
-        print("not going to show now")
         # plt.show()
 
         # very important to prevent memory leaks!
@@ -382,12 +381,10 @@ class Project_GUI(tk.Tk):
         return img
 
     def create_model(self, weights_path=None):
+        print("Creating Deep Learning Model for Analysis")
         model = Sequential()
         model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=(3, 640, 480)))
-        print("fail")
         model.add(Conv2D(64, (3, 3), activation='relu', dim_ordering="th"))
-        print("fail2")
-
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Dropout(0.25))
         model.add(Flatten())
