@@ -297,12 +297,15 @@ class Project_GUI(tk.Tk):
         wf.writeframes(b''.join(frames))
         wf.close()
 
-        # multi-thread the creation of the two new threads in python
+        # multi-thread the creation of the three new threads in python
         self.create_cardiogram_thread = threading.Thread(target=self.create_cardiogram, daemon=True)
         self.create_cardiogram_thread.start()
 
         self.create_mel_spectrogram_thread = threading.Thread(target=self.create_mel_spectrogram, daemon=True)
         self.create_mel_spectrogram_thread.start()
+
+        self.get_BPM_thread = threading.Thread(target=self.getBPM(), daemon=True)
+        self.get_BPM_thread.start()
 
     def create_cardiogram(self):
         # Read file and get sampling freq [ usually 44100 Hz ]  and sound object
@@ -404,10 +407,9 @@ class Project_GUI(tk.Tk):
 
 
     def getBPM(self):
-        print("BPM = 71.282")
-        measures = hb_audio.process('heartbeat.wav')
-        print(measures['bpm'])
-        hb_audio.plotter()  # returns 72.016
+        measures = hb_audio.process(self.WAVE_OUTPUT_FILENAME)
+        print("BPM = " + str(measures['bpm']))
+        hb_audio.plotter()
 
     def get_prediction(self):
         model = self.create_model(self.KERAS_WEIGHT_FILE)
