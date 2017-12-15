@@ -146,6 +146,12 @@ import librosa
 import librosa.display
 import numpy as np
 
+#import the heartbeat python script to calculate the BPM
+import sys
+sys.path.append("/heart-rate-analysis-module/experimental/heartbeat_audio_experimental.py")
+import heartbeat_audio_experimental as hb_audio
+
+
 
 
 class Project_GUI(tk.Tk):
@@ -395,6 +401,13 @@ class Project_GUI(tk.Tk):
         if weights_path:
             model.load_weights(weights_path)
         return model
+
+
+    def getBPM(self):
+        print("BPM = 71.282")
+        measures = hb_audio.process('heartbeat.wav')
+        print(measures['bpm'])
+        hb_audio.plotter()  # returns 72.016
 
     def get_prediction(self):
         model = self.create_model(self.KERAS_WEIGHT_FILE)
