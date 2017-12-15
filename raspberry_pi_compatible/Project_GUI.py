@@ -191,8 +191,8 @@ class Project_GUI(tk.Tk):
         self.maxMin = 0
         self.progress.pack(side=RIGHT)
 
-        diagnosis_label = Label(root, text="Diagnosis will show up here")
-        diagnosis_label.pack()
+        self.diagnosis_label = Label(root, text="Diagnosis will show up here")
+        self.diagnosis_label.pack()
 
         imageFrame = Frame(root)
         imageFrame.pack()
@@ -233,6 +233,7 @@ class Project_GUI(tk.Tk):
         self.image_reference_2 = None
         print(self.image_reference_1)
         print(self.image_reference_2)
+        self.diagnosis_label['text'] = "Diagnosis Will Show up Here"
 
         for image in self.image_list:
             image.config(image='') #clear the images on the screen
@@ -403,8 +404,10 @@ class Project_GUI(tk.Tk):
         prediction = model.predict_classes(numpy_image_from_spectrogram)
         if(prediction[0] == 0):
             print("Heartbeat NORMAL")
+            self.diagnosis_label['text'] = "Heartbeat Normal."
         else:
             print("Heartbeat ABNORMAL")
+            self.diagnosis_label['text'] = "Heartbeat Abnormal."
 
 app = Project_GUI()
 app.mainloop()
