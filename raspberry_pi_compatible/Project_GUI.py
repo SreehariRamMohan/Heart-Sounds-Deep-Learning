@@ -162,7 +162,7 @@ class Project_GUI(tk.Tk):
         # recording attributes.
         self.CHUNK = 1024
         self.FORMAT = pyaudio.paInt16
-        self.CHANNELS = 2
+        self.CHANNELS = 1
         self.RATE = 44100
         self.RECORD_SECONDS = 30
         self.WAVE_OUTPUT_FILENAME = "/home/pi/Desktop/Sreehari_heartbeat.wav"
