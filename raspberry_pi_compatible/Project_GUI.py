@@ -147,8 +147,8 @@ import librosa.display
 import numpy as np
 
 #import the heartbeat python script to calculate the BPM
-import sys
-sys.path.append("/heart-rate-analysis-module/experimental/heartbeat_audio_experimental.py")
+import sys, os
+sys.path.append("/home/pi/Desktop/Heart-Sounds-Deep-Learning/heart-rate-analysis-module/experimental")
 import heartbeat_audio_experimental as hb_audio
 
 
