@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ac0680-9e40-478c-b314-8c174d827454" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raspberry_pi_compatible/Project_GUI.py" afterPath="$PROJECT_DIR$/raspberry_pi_compatible/Project_GUI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/heart-rate-analysis-module/experimental/heartbeat_audio_experimental.py" afterPath="$PROJECT_DIR$/heart-rate-analysis-module/experimental/heartbeat_audio_experimental.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project_GUI.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Project_GUI.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/raspberry_pi_compatible/Project_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="267">
-              <caret line="146" column="18" lean-forward="true" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
+            <state relative-caret-position="327">
+              <caret line="150" column="102" lean-forward="true" selection-start-line="150" selection-start-column="102" selection-end-line="150" selection-end-column="102" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
                 <marker date="1513396672000" expanded="true" signature="3986:5376" ph="..." />
@@ -59,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="heartbeat_audio_experimental.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="heartbeat_audio_experimental.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/heart-rate-analysis-module/experimental/heartbeat_audio_experimental.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+            <state relative-caret-position="210">
+              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -99,6 +98,7 @@
         <option value="$PROJECT_DIR$/heart-rate-analysis-module/UsingHeartbeatModule.py" />
         <option value="$PROJECT_DIR$/heart-rate-analysis-module/experimental/Finding_BPM_From_Wav.py" />
         <option value="$PROJECT_DIR$/raspberry_pi_compatible/Project_GUI.py" />
+        <option value="$PROJECT_DIR$/heart-rate-analysis-module/experimental/heartbeat_audio_experimental.py" />
       </list>
     </option>
   </component>
@@ -436,22 +436,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/heart-rate-analysis-module/experimental/heartbeat_audio_experimental.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="19" lean-forward="false" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/raspberry_pi_compatible/Project_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="146" column="18" lean-forward="true" selection-start-line="146" selection-start-column="18" selection-end-line="146" selection-end-column="18" />
+        <state relative-caret-position="327">
+          <caret line="150" column="102" lean-forward="true" selection-start-line="150" selection-start-column="102" selection-end-line="150" selection-end-column="102" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
             <marker date="1513396672000" expanded="true" signature="3986:5376" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/heart-rate-analysis-module/experimental/heartbeat_audio_experimental.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
