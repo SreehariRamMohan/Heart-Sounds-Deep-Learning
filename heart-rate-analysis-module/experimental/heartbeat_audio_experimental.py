@@ -14,7 +14,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 
-sys.path.append('../')
+import sys, os
+sys.path.append("/home/pi/Desktop/Heart-Sounds-Deep-Learning/heart-rate-analysis-module/")
 import heartbeat as hb
 
 __author__ = "Paul van Gent"
