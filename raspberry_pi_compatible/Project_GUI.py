@@ -348,7 +348,7 @@ class Project_GUI(tk.Tk):
 
         # Plot the tone
         plt.xlim((0, 8000))
-        plt.figure(figsize=(0.875, 0.375))
+        plt.figure(figsize=(875, 375))
         ax1 = plt.axes(frameon=False)
         ax1.set_frame_on(False)
         ax1.axes.get_yaxis().set_visible(False)
@@ -393,7 +393,7 @@ class Project_GUI(tk.Tk):
     def create_model(self, weights_path=None):
         print("Creating Deep Learning Model for Analysis")
         model = Sequential()
-        model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=(3, 640, 480)))
+        model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=(3, 87, 37)))
         model.add(Conv2D(64, (3, 3), activation='relu', dim_ordering="th"))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Dropout(0.25))
