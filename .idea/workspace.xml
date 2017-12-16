@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="62ac0680-9e40-478c-b314-8c174d827454" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/raspberry_pi_compatible/Project_GUI.py" afterPath="$PROJECT_DIR$/raspberry_pi_compatible/Project_GUI.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,11 +48,11 @@
       <file leaf-file-name="Project_GUI.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/raspberry_pi_compatible/Project_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="397" column="49" lean-forward="true" selection-start-line="397" selection-start-column="49" selection-end-line="397" selection-end-column="49" />
+            <state relative-caret-position="591">
+              <caret line="428" column="0" lean-forward="true" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
-                <marker date="1513457888000" expanded="true" signature="3986:5376" ph="..." />
+                <marker date="1513458202000" expanded="true" signature="3986:5376" ph="..." />
               </folding>
             </state>
           </provider>
@@ -303,7 +302,7 @@
           <caret line="145" column="22" lean-forward="true" selection-start-line="145" selection-start-column="22" selection-end-line="145" selection-end-column="22" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1513457888000" expanded="true" signature="3986:5376" ph="..." />
+            <marker date="1513458202000" expanded="true" signature="3986:5376" ph="..." />
           </folding>
         </state>
       </provider>
@@ -382,7 +381,7 @@
           <caret line="154" column="0" lean-forward="true" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1513457888000" expanded="true" signature="3986:5376" ph="..." />
+            <marker date="1513458202000" expanded="true" signature="3986:5376" ph="..." />
           </folding>
         </state>
       </provider>
@@ -517,11 +516,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/raspberry_pi_compatible/Project_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="397" column="49" lean-forward="true" selection-start-line="397" selection-start-column="49" selection-end-line="397" selection-end-column="49" />
+        <state relative-caret-position="591">
+          <caret line="428" column="0" lean-forward="true" selection-start-line="428" selection-start-column="0" selection-end-line="428" selection-end-column="0" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
-            <marker date="1513457888000" expanded="true" signature="3986:5376" ph="..." />
+            <marker date="1513458202000" expanded="true" signature="3986:5376" ph="..." />
           </folding>
         </state>
       </provider>

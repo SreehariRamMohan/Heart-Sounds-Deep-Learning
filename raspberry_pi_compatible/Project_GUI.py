@@ -348,7 +348,7 @@ class Project_GUI(tk.Tk):
 
         # Plot the tone
         plt.xlim((0, 8000))
-        plt.figure(figsize=(875, 375))
+        plt.figure(figsize=(0.875, 0.375))
         ax1 = plt.axes(frameon=False)
         ax1.set_frame_on(False)
         ax1.axes.get_yaxis().set_visible(False)
