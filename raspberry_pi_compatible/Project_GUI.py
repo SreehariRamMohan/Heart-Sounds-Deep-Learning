@@ -393,7 +393,7 @@ class Project_GUI(tk.Tk):
     def create_model(self, weights_path=None):
         print("Creating Deep Learning Model for Analysis")
         model = Sequential()
-        model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=(3, 87, 37)))
+        model.add(Conv2D(32, kernel_size=(3, 3),activation='relu',input_shape=(3, 640, 480)))
         model.add(Conv2D(64, (3, 3), activation='relu', dim_ordering="th"))
         model.add(MaxPooling2D(pool_size=(2, 2)))
         model.add(Dropout(0.25))
