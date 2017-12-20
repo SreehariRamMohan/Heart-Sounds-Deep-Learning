@@ -151,8 +151,7 @@ import sys, os
 sys.path.append("/home/pi/Desktop/Heart-Sounds-Deep-Learning/heart-rate-analysis-module/experimental")
 import heartbeat_audio_experimental as hb_audio
 
-
-
+plt.figure(figsize=(0.875, 0.375))
 
 class Project_GUI(tk.Tk):
 
@@ -368,6 +367,7 @@ class Project_GUI(tk.Tk):
 
     def create_mel_spectrogram(self):
         sig, fs = librosa.load(self.WAVE_OUTPUT_FILENAME)
+
         # make pictures name
         save_path = self.MEL_SPECTROGRAM_OUTPUT_FILENAME
 
