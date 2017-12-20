@@ -345,7 +345,11 @@ class Project_GUI(tk.Tk):
 
         # Plot the tone
         plt.xlim((0, 8000))
-        plt.figure(figsize=(0.875, 0.375), dpi = 220)
+
+        #set the dpi of the screen to ensure proper spectrogram dimensions.
+        my_dpi = 96
+
+        plt.figure(figsize=(640/my_dpi, 480/my_dpi), dpi = my_dpi)
         ax1 = plt.axes(frameon=False)
         ax1.set_frame_on(False)
         ax1.axes.get_yaxis().set_visible(False)
