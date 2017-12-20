@@ -151,8 +151,6 @@ import sys, os
 sys.path.append("/home/pi/Desktop/Heart-Sounds-Deep-Learning/heart-rate-analysis-module/experimental")
 import heartbeat_audio_experimental as hb_audio
 
-plt.figure(figsize=(0.875, 0.375))
-
 class Project_GUI(tk.Tk):
 
     def __init__(self, *args, **kwargs):
@@ -347,7 +345,7 @@ class Project_GUI(tk.Tk):
 
         # Plot the tone
         plt.xlim((0, 8000))
-        plt.figure(figsize=(0.875, 0.375))
+        plt.figure(figsize=(0.875, 0.375), dpi = 220)
         ax1 = plt.axes(frameon=False)
         ax1.set_frame_on(False)
         ax1.axes.get_yaxis().set_visible(False)

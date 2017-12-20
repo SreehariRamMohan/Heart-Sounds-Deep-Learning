@@ -96,9 +96,9 @@ import numpy as np
 
 CHUNK = 1024
 FORMAT = pyaudio.paInt16
-CHANNELS = 2
+CHANNELS = 1
 RATE = 44100
-RECORD_SECONDS = 15
+RECORD_SECONDS = 30
 WAVE_OUTPUT_FILENAME = "/Users/sreeharirammohan/Desktop/output_test.wav"
 
 p = pyaudio.PyAudio()
