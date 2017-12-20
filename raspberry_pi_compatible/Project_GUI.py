@@ -405,6 +405,11 @@ class Project_GUI(tk.Tk):
         model.add(Dense(2, activation='softmax'))
         if weights_path:
             model.load_weights(weights_path)
+
+            #below line prevents "Cannot interpret feed_dict key as Tensor" error
+            #Makes keras "play nice" with multi-threading
+            model._make_predict_function()
+
         return model
 
 
