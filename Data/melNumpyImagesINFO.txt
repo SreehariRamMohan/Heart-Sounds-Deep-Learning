@@ -1,0 +1,30 @@
+The following two datasets,
+    1) melNumpyLabels.npy
+    2) melNumpyImages.npy ~~ 4.5 gigs
+IS A TRAP, DO NOT USE THIS DATASET, I'VE SPENT THE LAST 4.5 HRS FIGURING THIS OUT!!!
+
+The data here:
+    pickle_filepath_X = "/Users/sreeharirammohan/Desktop/all_data/allMelNumpyImages.npy"
+    pickle_filepath_Y = "/Users/sreeharirammohan/Desktop/all_data/allMelNumpyLabels.npy"
+is the real data, that contains the training/testing data for the neural network in experimental.py script.
+This was the data which got us to 88.735% !
+
+Linked to the following h5 model file:
+    weights-best-031-0.88735.hdf5
+
+Brief summary of what is in them:
+    3240 mel-spectrograms
+    Each mel-spectrogram is 640 by 480 pixels and has shape
+    (3240, 3, 640, 480)
+
+X_train shape:
+(2592, 3, 640, 480)
+-----
+X_test shape
+(648, 3, 640, 480)
+-----
+Y_train.shape
+(2592, 2)
+-----
+Y_test shape
+(648, 2)

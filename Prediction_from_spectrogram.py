@@ -1,11 +1,15 @@
 from __future__ import print_function
 import numpy as np
 np.random.seed(123)
-import numpy as np
-np.random.seed(123)
+from keras.layers.convolutional import Conv2D
+from keras.models import Sequential
+from keras.layers.core import Flatten, Dense, Dropout
+from keras.layers.convolutional import MaxPooling2D
 import itertools
+import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import confusion_matrix
 import io
 import numpy as np
 np.random.seed(123)  # for reproducibility
@@ -14,10 +18,12 @@ from keras.models import Sequential
 from keras.layers.core import Flatten, Dense, Dropout
 from keras.layers.convolutional import MaxPooling2D
 from skimage import io
+import glob
 import matplotlib
-matplotlib.use('Agg')
+matplotlib.use('Agg') # No pictures displayed
+import os
 import matplotlib
-matplotlib.use('Agg')
+matplotlib.use('Agg') # No pictures displayed
 import numpy as np
 
 def convert_spectrogram_to_numpy(path_to_spectrogram):
@@ -43,6 +49,39 @@ def create_model(weights_path=None):
 
 model = create_model('/Users/sreeharirammohan/Desktop/check_point_models/weights-best-031-0.88735.hdf5')
 print("Created model")
+
+
+def make_prediction_from_path(path):
+    numpy_image_from_spectrogram = np.array(convert_spectrogram_to_numpy(path))
+    print("Converted heartbeat data to numpy arr")
+
+    numpy_image_from_spectrogram = np.swapaxes(numpy_image_from_spectrogram, 2, 0)
+    numpy_image_from_spectrogram = numpy_image_from_spectrogram[None, ...]
+    prediction = model.predict_classes(numpy_image_from_spectrogram)
+    if (prediction[0] == 0):
+        print("Heartbeat NORMAL")
+    else:
+        print("Heartbeat ABNORMAL")
+
+
+'''
+root_dir = '/Users/sreeharirammohan/Desktop/all_data/mel-all-abnormal'
+all_img_paths = glob.glob(os.path.join(root_dir, '*.*'))
+
+zeroCount = 0
+oneCount = 0
+
+for i, img_path in enumerate(all_img_paths):
+    img = img[None, ...]
+    prediction = model.predict_classes(img)
+    if (prediction[0] == 0):
+        print("Heartbeat NORMAL")
+        zeroCount += 1
+    else:
+        print("Heartbeat ABNORMAL")
+'''
+
+
 
 print("Finished import statements")
 pickle_filepath_X = "/Users/sreeharirammohan/Desktop/all_data/allMelNumpyImages.npy"
@@ -70,74 +109,14 @@ print(Y_test.shape)
 Y_train.reshape(2592, 2)
 Y_test.reshape(648, 2)
 
+
 X_train = X_train.astype('float32')
 X_test = X_test.astype('float32')
 
 
-'''
-basic example of plotting a confusion matrix is below
-'''
 y_pred = model.predict_classes(X_test)
 print(y_pred)
 
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix([ np.where(r==1)[0][0] for r in Y_test], y_pred)
 print(cm)
-
-'''
-A more complex example of plotting a confusion matrix is below
-'''
-def plot_confusion_matrix(cm, classes,
-                          normalize=False,
-                          title='Confusion matrix',
-                          cmap=plt.cm.Blues):
-    """
-    This function prints and plots the confusion matrix.
-    Normalization can be applied by setting `normalize=True`.
-    """
-    if normalize:
-        cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
-        print("Normalized confusion matrix")
-    else:
-        print('Confusion matrix, without normalization')
-
-    print(cm)
-
-    plt.imshow(cm, interpolation='nearest', cmap=cmap)
-    plt.title(title)
-    plt.colorbar()
-    tick_marks = np.arange(len(classes))
-    plt.xticks(tick_marks, classes, rotation=45)
-    plt.yticks(tick_marks, classes)
-
-    fmt = '.2f' if normalize else 'd'
-    thresh = cm.max() / 2.
-    for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
-        plt.text(j, i, format(cm[i, j], fmt),
-                 horizontalalignment="center",
-                 color="white" if cm[i, j] > thresh else "black")
-
-    plt.tight_layout()
-    plt.ylabel('True label')
-    plt.xlabel('Predicted label')
-
-# Compute confusion matrix
-
-###already did the below 2 lines above
-#y_pred = model.predict_classes(X_test)
-#cm = confusion_matrix([ np.where(r==1)[0][0] for r in Y_test], y_pred)
-
-#set class names
-class_names = ['normal', 'abnormal']
-
-# Plot non-normalized confusion matrix
-plt.figure()
-plot_confusion_matrix(cm, classes=class_names,
-                      title='Confusion matrix, without normalization')
-
-# Plot normalized confusion matrix
-plt.figure()
-plot_confusion_matrix(cm, classes=class_names, normalize=True,
-                      title='Normalized confusion matrix')
-
-plt.show()
