@@ -8,8 +8,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 #retrieving the X and Y data stored as .npy files with pickle
-pickle_filepath_X = "/Users/sreeharirammohan/Desktop/all_data/allMelNumpyImages.npy"
-pickle_filepath_Y = "/Users/sreeharirammohan/Desktop/all_data/allMelNumpyLabels.npy"
+pickle_filepath_X = "/Users/sreeharirammohan/Desktop/MFCCs_Data.npy"
+pickle_filepath_Y = "/Users/sreeharirammohan/Desktop/MFCC_Labels.npy"
+
 print("Retrieving X and Y training data")
 X = np.load(pickle_filepath_X)
 y = np.load(pickle_filepath_Y)
