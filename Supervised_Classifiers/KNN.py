@@ -13,9 +13,18 @@ y = np.load(pickle_filepath_Y)
 print(X.shape)
 print(y.shape)
 
+'''
+Fix the dimensionality of the dataset, since sklearn can only take 2 dimensions
+'''
+nsamples, nx, ny = X.shape
+X_2 = X.reshape((nsamples,nx*ny))
+print(X_2.shape)
+
+
 # Splitting the dataset into the Training set and Test set
 from sklearn.cross_validation import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
+X_train, X_test, y_train, y_test = train_test_split(X_2, y, test_size = 0.2, random_state = 0)
+
 
 # Fitting K-Nearest Neighbors Algorithm to the Training set
 from sklearn.neighbors import KNeighborsClassifier
@@ -27,7 +36,7 @@ y_pred = classifier.predict(X_test)
 
 #creating basic confusion matrix
 from sklearn.metrics import confusion_matrix
-cm = confusion_matrix([ np.where(r==1)[0][0] for r in y_test], y_pred)
+cm = confusion_matrix(y_test, y_pred)
 print(cm)
 
 #Getting the basic validated accuracy of the dummy classifier

@@ -34,7 +34,7 @@ one_count = 0
 zero_count = 0
 progress = 0
 
-pickle_filepath_X = "/Users/sreeharirammohan/Desktop/Not_real_data.npy"
+pickle_filepath_X = "/Users/sreeharirammohan/Desktop/MFCCs_Data.npy"
 pickle_filepath_Y = "/Users/sreeharirammohan/Desktop/MFCC_Labels.npy"
 
 all_img_paths = glob.glob('/Users/sreeharirammohan/Desktop/heart_sounds/**/*.wav', recursive=True) #glob.glob(os.path.join(root_dir, '*.*'))
@@ -58,18 +58,18 @@ if not os.path.exists(pickle_filepath_X) or not os.path.exists(pickle_filepath_Y
             print(str(100*(progress/3240)) + str("% done"))
 
         #get features and label for this wav file
-        #individual_MFCC = MFCC_from_wav(wav_path)
+        individual_MFCC = MFCC_from_wav(wav_path)
         label = get_class(wav_path)
 
         #Standardize each individual_MFCC to the same size (add 0's after to keep the size the same)
-        #zero_rows_to_add = MAX_LENGTH - individual_MFCC.shape[1]
-        #zero_block = np.zeros((20, zero_rows_to_add), dtype=individual_MFCC.dtype)
-        #individual_MFCC = np.concatenate((individual_MFCC,zero_block), axis=1)
+        zero_rows_to_add = MAX_LENGTH - individual_MFCC.shape[1]
+        zero_block = np.zeros((20, zero_rows_to_add), dtype=individual_MFCC.dtype)
+        individual_MFCC = np.concatenate((individual_MFCC,zero_block), axis=1)
 
-        #print(individual_MFCC.shape)
+        print(individual_MFCC.shape)
 
         #add features and label to the array
-       # MFCCs.append(individual_MFCC)
+        MFCCs.append(individual_MFCC)
         labels.append(label)
         progress += 1
 
@@ -82,18 +82,9 @@ if not os.path.exists(pickle_filepath_X) or not os.path.exists(pickle_filepath_Y
 
 
     # binary encode
-    '''
-    onehot_encoder = OneHotEncoder(sparse=False)
-    Y = onehot_encoder.fit_transform(labels)
-    Y = Y[0] #removes [[]] structure, keeping only []
-    print(Y.shape)
-    print(Y)
-
-    Y = np.eye(2)[labels]
-    '''
-
     Y = np.array(labels)
     Y.reshape(3240,)
+    print(Y.shape)
 
 
     from sklearn.cross_validation import train_test_split

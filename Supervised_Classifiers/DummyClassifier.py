@@ -22,9 +22,6 @@ nsamples, nx, ny = X.shape
 X_2 = X.reshape((nsamples,nx*ny))
 print(X_2.shape)
 
-print(y)
-
-
 # Splitting the dataset into the Training set and Test set
 from sklearn.cross_validation import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X_2, y, test_size = 0.2, random_state = 0)
@@ -41,7 +38,7 @@ print(y_pred.shape)
 
 #creating basic confusion matrix
 from sklearn.metrics import confusion_matrix
-cm = confusion_matrix([ np.where(r==1)[0][0] for r in y_test], y_pred)
+cm = confusion_matrix(y_test, y_pred)
 print(cm)
 
 #Getting the basic validated accuracy of the dummy classifier
