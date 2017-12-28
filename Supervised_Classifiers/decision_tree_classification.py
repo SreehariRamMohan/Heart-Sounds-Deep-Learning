@@ -10,16 +10,13 @@ print("Retrieving X and Y training data")
 X = np.load(pickle_filepath_X)
 y = np.load(pickle_filepath_Y)
 
-print(X.shape)
-print(y.shape)
-
 # Splitting the dataset into the Training set and Test set
 from sklearn.cross_validation import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.25, random_state = 0)
 
-# Fitting K-Nearest Neighbors Algorithm to the Training set
-from sklearn.neighbors import KNeighborsClassifier
-classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
+# Fitting Decision Tree Algorithm to the Training set
+from sklearn.tree import DecisionTreeClassifier
+classifier = DecisionTreeClassifier(criterion= 'entropy', random_state=123)
 classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
