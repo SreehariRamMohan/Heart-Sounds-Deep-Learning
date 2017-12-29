@@ -33,9 +33,17 @@ dummy_classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
 print(X_test.shape)
-y_pred = dummy_classifier.predict(X_test)
-print(y_pred.shape)
 
+
+print("----------starting time benchmark----------")
+import time
+start = time.clock()
+y_pred = dummy_classifier.predict(X_test)
+print(print(time.clock() - start))
+print("----------ending time benchmark----------")
+
+
+print(y_pred.shape)
 #creating basic confusion matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
