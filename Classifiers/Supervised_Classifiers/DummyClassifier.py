@@ -23,8 +23,9 @@ if USING_RASPBERRY_PI:
 
 
 print("Retrieving X and Y training data")
-X = np.load(pickle_filepath_X)
 y = np.load(pickle_filepath_Y)
+print("Loaded Y data")
+X = np.load(pickle_filepath_X)
 
 '''
 Fix the dimensionality of the dataset, since sklearn can only take 2 dimensions
