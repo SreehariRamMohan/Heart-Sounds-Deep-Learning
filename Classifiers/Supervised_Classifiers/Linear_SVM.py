@@ -29,7 +29,12 @@ classifier = SVC(kernel = 'linear', random_state = 0)
 classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
+print("----------starting time benchmark----------")
+import time
+start = time.clock()
 y_pred = classifier.predict(X_test)
+print(print(time.clock() - start))
+print("----------ending time benchmark----------")
 
 #creating basic confusion matrix
 from sklearn.metrics import confusion_matrix
