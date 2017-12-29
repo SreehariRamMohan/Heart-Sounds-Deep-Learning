@@ -27,10 +27,23 @@ def create_model(weights_path=None):
     return model
 
 
-model = create_model('/Users/sreeharirammohan/Desktop/check_point_models/weights-best-031-0.88735.hdf5')
+WEIGHTS_PATH = "/Users/sreeharirammohan/Desktop/check_point_models/weights-best-031-0.88735.hdf5"
+WEIGHTS_PATH_PI = "/home/pi/Desktop/weights-best-031-0.88735.hdf5"
 
 pickle_filepath_X = "/Users/sreeharirammohan/Desktop/all_data/allMelNumpyImages.npy"
 pickle_filepath_Y = "/Users/sreeharirammohan/Desktop/all_data/allMelNumpyLabels.npy"
+
+pickle_filepath_X_pi = "/media/pi/3577-249A/MFCCs_Data.npy"
+pickle_filepath_Y_pi = "/media/pi/3577-249A/MFCC_Labels.npy"
+
+USING_RASPBERRY_PI = True
+
+if USING_RASPBERRY_PI:
+    pickle_filepath_X = pickle_filepath_X_pi
+    pickle_filepath_Y = pickle_filepath_Y_pi
+
+model = create_model(WEIGHTS_PATH)
+
 
 X = np.load(pickle_filepath_X)
 Y = np.load(pickle_filepath_Y)

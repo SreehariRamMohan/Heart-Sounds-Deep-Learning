@@ -6,6 +6,17 @@ import pandas as pd
 pickle_filepath_X = "/Users/sreeharirammohan/Desktop/MFCCs_Data.npy"
 pickle_filepath_Y = "/Users/sreeharirammohan/Desktop/MFCC_Labels.npy"
 
+pickle_filepath_X_pi = "/media/pi/3577-249A/MFCCs_Data.npy"
+pickle_filepath_Y_pi = "/media/pi/3577-249A/MFCC_Labels.npy"
+
+USING_RASPBERRY_PI = True
+
+if USING_RASPBERRY_PI:
+    pickle_filepath_X = pickle_filepath_X_pi
+    pickle_filepath_Y = pickle_filepath_Y_pi
+
+
+
 print("Retrieving X and Y training data")
 X = np.load(pickle_filepath_X)
 y = np.load(pickle_filepath_Y)
