@@ -9,7 +9,7 @@ pickle_filepath_Y = "/Users/sreeharirammohan/Desktop/MFCC_Labels.npy"
 pickle_filepath_X_pi = "/media/pi/3577-249A/MFCCs_Data.npy"
 pickle_filepath_Y_pi = "/media/pi/3577-249A/MFCC_Labels.npy"
 
-USING_RASPBERRY_PI = True
+USING_RASPBERRY_PI = False
 
 if USING_RASPBERRY_PI:
     pickle_filepath_X = pickle_filepath_X_pi
