@@ -9,7 +9,7 @@ pickle_filepath_Y = "/Users/sreeharirammohan/Desktop/MFCC_Labels.npy"
 pickle_filepath_X_pi = "/media/pi/3577-249A/MFCCs_Data.npy"
 pickle_filepath_Y_pi = "/media/pi/3577-249A/MFCC_Labels.npy"
 
-USING_RASPBERRY_PI = True
+USING_RASPBERRY_PI = False
 
 if USING_RASPBERRY_PI:
     pickle_filepath_X = pickle_filepath_X_pi
@@ -37,15 +37,23 @@ from sklearn.tree import DecisionTreeClassifier
 #class_weight_dict = {0:1, 1:3.872180451}
 #don't use class_weight_dict I found that the accuracy goes down to 63.8888888889%
 
-classifier = DecisionTreeClassifier(criterion= 'entropy', random_state=123, class_weight=class_weight_dict)
+classifier = DecisionTreeClassifier(criterion= 'entropy', random_state=123)
 classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
-print("----------starting time benchmark----------")
+print("----------starting 5 time average benchmark----------")
+times = []
 import time
-start = time.clock()
-y_pred = classifier.predict(X_test)
-print(print(time.clock() - start))
+for i in range(0, 5):
+    start = time.clock()
+    y_pred = classifier.predict(X_test)
+    time_taken = time.clock() - start
+    times.append(time_taken)
+    print("On iteration " + str(i + 1) + " time taken was " + str(time_taken))
+print("DONE WITH 5 TESTS")
+print(times)
+import statistics as s
+print("Average time = " + str(s.mean(times)))
 print("----------ending time benchmark----------")
 
 #creating basic confusion matrix

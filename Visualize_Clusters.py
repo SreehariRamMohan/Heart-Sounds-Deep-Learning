@@ -15,3 +15,4 @@ print(X_2.shape)
 
 print("Plotting")
 hyp.plot(X_2, '.', n_clusters=2)
+print("done")
