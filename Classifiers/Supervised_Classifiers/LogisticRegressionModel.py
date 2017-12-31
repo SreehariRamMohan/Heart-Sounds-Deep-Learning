@@ -62,3 +62,66 @@ print(cm)
 #Getting the basic validated accuracy of the dummy classifier
 accuracy = classifier.score(X_test, y_test)
 print("Accuracy is " + str(accuracy*100) + "%")
+
+print("---------------ROC / AUC / Frequency---------------")
+
+from sklearn.metrics import *
+#store predicted probabilities for class 1
+y_pred_prob = classifier.predict_proba(X_test)[:, 1]
+
+'''
+Plotting a histogram of predicted probabilities
+'''
+# histogram of predicted probabilities
+plt.hist(y_pred_prob, bins=8)
+plt.xlim(0, 1)
+plt.title('Histogram of predicted probabilities')
+plt.xlabel('Predicted probability of diabetes')
+plt.ylabel('Frequency')
+plt.show()
+
+
+
+'''
+Basic example of plotting ROC curve
+
+ROC shows sensitivity vs (1-specificity) for all possible classification
+thresholds from 0-1
+
+'''
+
+fpr, tpr, thresholds = roc_curve(y_test, y_pred_prob)
+plt.plot(fpr, tpr)
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.0])
+plt.title('ROC curve for diabetes classifier')
+plt.xlabel('False Positive Rate (1 - Specificity)')
+plt.ylabel('True Positive Rate (Sensitivity)')
+plt.grid(True)
+plt.show()
+
+
+def evaluate_threshold(threshold, tpr, fpr):
+    print("senitivity: " + str(tpr[threshold > threshold][-1]))
+    print("Specificity " + str(float(1 - fpr[threshold > threshold][-1])))
+
+
+'''
+AUC is the area under the ROC curve
+
+A higher AUC score is a better classifier
+
+Used as single number summary of performance of classifier
+
+best possible AUC is 1
+
+AUC is useful even when there is a high class imbalance
+
+'''
+
+# IMPORTANT: first argument is true values, second argument is predicted probabilities
+print(roc_auc_score(y_test, y_pred_prob))
+
+# calculate cross-validated AUC
+from sklearn.cross_validation import cross_val_score
+print(cross_val_score(classifier, X_2, y, cv=10, scoring='roc_auc').mean())
