@@ -68,25 +68,48 @@ X_train = X_train.astype('float32')
 X_test = X_test.astype('float32')
 
 
-y_pred_prob = model.predict(X_test)
+y_pred = model.predict(X_test)
 
+
+print("---------------ROC / AUC / Frequency---------------")
+
+from sklearn.metrics import *
+#store predicted probabilities for class 1
+y_pred_proba = model.predict_proba(X_test)[:, 1]
+
+'''
+Plotting a histogram of predicted probabilities
+'''
+# histogram of predicted probabilities
+plt.hist(y_pred_proba, bins=8)
+plt.xlim(0, 1)
+plt.title('Histogram of predicted probabilities')
+plt.xlabel('Predicted probability of diabetes')
+plt.ylabel('Frequency')
+plt.show()
 
 '''
 Basic example of plotting ROC curve
+
+ROC curve shows relationship between True Positive Rate and False Positive Rate
 
 ROC shows sensitivity vs (1-specificity) for all possible classification
 thresholds from 0-1
 
 '''
+
+Y_test = [ np.where(r==1)[0][0] for r in Y_test]
+
 from sklearn.metrics import *
-fpr, tpr, thresholds = roc_curve(Y_test, y_pred_prob)
+fpr, tpr, thresholds = roc_curve(Y_test, y_pred_proba)
 plt.plot(fpr, tpr)
 plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.0])
-plt.title('ROC curve for diabetes classifier')
+plt.title('ROC curve for heart abnormality classification')
 plt.xlabel('False Positive Rate (1 - Specificity)')
 plt.ylabel('True Positive Rate (Sensitivity)')
 plt.grid(True)
+plt.show()
 
 
 def evaluate_threshold(threshold, tpr, fpr):
@@ -109,8 +132,4 @@ AUC is useful even when there is a high class imbalance
 '''
 
 # IMPORTANT: first argument is true values, second argument is predicted probabilities
-print(roc_auc_score(Y_test, y_pred_prob))
-
-# calculate cross-validated AUC
-from sklearn.cross_validation import cross_val_score
-cross_val_score(model, X, Y, cv=10, scoring='roc_auc').mean()
+print(roc_auc_score(Y_test, y_pred_proba))
