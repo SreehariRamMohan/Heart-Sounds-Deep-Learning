@@ -41,6 +41,18 @@ classifier = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
 classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
+y_pred = classifier.predict(X_test)
+
+#creating basic confusion matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+
+#Getting the basic validated accuracy of the dummy classifier
+accuracy = classifier.score(X_test, y_test)
+print("Accuracy is " + str(accuracy*100) + "%")
+
+
 print("----------starting 5 time average benchmark----------")
 times = []
 import time
@@ -56,14 +68,7 @@ import statistics as s
 print("Average time = " + str(s.mean(times)))
 print("----------ending time benchmark----------")
 
-#creating basic confusion matrix
-from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
 
-#Getting the basic validated accuracy of the dummy classifier
-accuracy = classifier.score(X_test, y_test)
-print("Accuracy is " + str(accuracy*100) + "%")
 
 
 print("---------------ROC / AUC / Frequency---------------")

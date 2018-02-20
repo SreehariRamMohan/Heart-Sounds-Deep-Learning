@@ -35,10 +35,20 @@ X_train, X_test, y_train, y_test = train_test_split(X_2, y, test_size = 0.2, ran
 
 # Fitting Logistic Regression to the Training set
 from sklearn.linear_model import LogisticRegression
-classifier = LogisticRegression(random_state = 0)
+class_weight_dict = {0:1, 1:3.872180451}
+classifier = LogisticRegression(random_state = 0, class_weight = class_weight_dict)
 classifier.fit(X_train, y_train)
 
 # Predicting the Test set results
+y_pred = classifier.predict(X_test)
+
+#creating basic confusion matrix
+from sklearn.metrics import confusion_matrix
+cm = confusion_matrix(y_test, y_pred)
+print(cm)
+
+
+
 print("----------starting 5 time average benchmark----------")
 times = []
 import time
@@ -53,11 +63,6 @@ print(times)
 import statistics as s
 print("Average time = " + str(s.mean(times)))
 print("----------ending time benchmark----------")
-
-#creating basic confusion matrix
-from sklearn.metrics import confusion_matrix
-cm = confusion_matrix(y_test, y_pred)
-print(cm)
 
 #Getting the basic validated accuracy of the dummy classifier
 accuracy = classifier.score(X_test, y_test)
@@ -94,7 +99,7 @@ fpr, tpr, thresholds = roc_curve(y_test, y_pred_prob)
 plt.plot(fpr, tpr)
 plt.xlim([0.0, 1.0])
 plt.ylim([0.0, 1.0])
-plt.title('ROC curve for diabetes classifier')
+plt.title('ROC curve for heart abnormality classification')
 plt.xlabel('False Positive Rate (1 - Specificity)')
 plt.ylabel('True Positive Rate (Sensitivity)')
 plt.grid(True)

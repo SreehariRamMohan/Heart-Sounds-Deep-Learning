@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="62ac0680-9e40-478c-b314-8c174d827454" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Visualization/2D_PCA.py" afterPath="$PROJECT_DIR$/Visualization/2D_PCA.py" />
+      <change beforePath="$PROJECT_DIR$/Classifiers/Ensemble_Classifiers/EnsembleLearning.py" afterPath="$PROJECT_DIR$/Classifiers/Ensemble_Classifiers/EnsembleVoting.py" />
+      <change beforePath="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/KNN.py" afterPath="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/KNN.py" />
+      <change beforePath="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/LogisticRegressionModel.py" afterPath="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/LogisticRegressionModel.py" />
+      <change beforePath="$PROJECT_DIR$/Sreehari_heartbeat.wav" afterPath="$PROJECT_DIR$/Sreehari_heartbeat.wav" />
+      <change beforePath="$PROJECT_DIR$/cardiogram.jpg" afterPath="$PROJECT_DIR$/cardiogram.jpg" />
+      <change beforePath="$PROJECT_DIR$/mel-spectrogram.jpg" afterPath="$PROJECT_DIR$/mel-spectrogram.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,17 +21,18 @@
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$Making_A_Prediction_From_Sound.coverage" NAME="Making_A_Prediction_From_Sound Coverage Results" MODIFIED="1514092187695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$Confusion_Matrix.coverage" NAME="Confusion_Matrix Coverage Results" MODIFIED="1514101454184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$BenchMark_Time_CPU_RAM.coverage" NAME="BenchMark_Time_CPU_RAM Coverage Results" MODIFIED="1514532438759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$LogisticRegressionModel.coverage" NAME="LogisticRegressionModel Coverage Results" MODIFIED="1514610847654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
+    <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$LogisticRegressionModel.coverage" NAME="LogisticRegressionModel Coverage Results" MODIFIED="1519093369702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$VisualizingNeuralNetworkArchitecture.coverage" NAME="VisualizingNeuralNetworkArchitecture Coverage Results" MODIFIED="1518468318398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$DummyClassifier.coverage" NAME="DummyClassifier Coverage Results" MODIFIED="1514748373546" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$naive_bayes.coverage" NAME="naive_bayes Coverage Results" MODIFIED="1514748654754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$ROC.coverage" NAME="ROC Coverage Results" MODIFIED="1514767662344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$2D_PCA.coverage" NAME="2D_PCA Coverage Results" MODIFIED="1518992947711" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Visualization" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$Linear_SVM.coverage" NAME="Linear_SVM Coverage Results" MODIFIED="1514612647823" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
-    <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$KNN.coverage" NAME="KNN Coverage Results" MODIFIED="1514749008177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
+    <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$KNN.coverage" NAME="KNN Coverage Results" MODIFIED="1519093578765" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$decision_tree_classification.coverage" NAME="decision_tree_classification Coverage Results" MODIFIED="1514616752551" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$RandomForest.coverage" NAME="RandomForest Coverage Results" MODIFIED="1514616990617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$Bench_Mark_Conv_Nueral_Net_CPU_Time.coverage" NAME="Bench_Mark_Conv_Nueral_Net_CPU_Time Coverage Results" MODIFIED="1514610258445" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$Project_GUI.coverage" NAME="Project_GUI Coverage Results" MODIFIED="1519018621987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$Batch_MFCC_Data.coverage" NAME="Batch_MFCC_Data Coverage Results" MODIFIED="1514451219568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$Prediction_from_spectrogram.coverage" NAME="Prediction_from_spectrogram Coverage Results" MODIFIED="1514101254399" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Heart_Sounds_Deep_Learning$Visualize_Clusters.coverage" NAME="Visualize_Clusters Coverage Results" MODIFIED="1514617547046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -49,14 +55,34 @@
     <favorites_list name="Heart-Sounds-Deep-Learning" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2D_PCA.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Visualization/2D_PCA.py">
+    <leaf>
+      <file leaf-file-name="LogisticRegressionModel.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/LogisticRegressionModel.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="135" column="61" lean-forward="false" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
+            <state relative-caret-position="231">
+              <caret line="98" column="18" lean-forward="true" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KNN.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/KNN.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EnsembleVoting.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classifiers/Ensemble_Classifiers/EnsembleVoting.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="137">
+              <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               <folding>
-                <element signature="e#0#37#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,15 +137,17 @@
         <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/DummyClassifier.py" />
         <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/decision_tree_classification.py" />
         <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/Gaussian_SVM.py" />
-        <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/KNN.py" />
         <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/Linear_SVM.py" />
-        <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/LogisticRegressionModel.py" />
         <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/naive_bayes.py" />
         <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/RandomForest.py" />
         <option value="$PROJECT_DIR$/ROC.py" />
         <option value="$PROJECT_DIR$/VisualizingNeuralNetworkArchitecture.py" />
         <option value="$PROJECT_DIR$/Classifiers/Ensemble_Classifiers/EnsembleLearning.py" />
         <option value="$PROJECT_DIR$/Visualization/2D_PCA.py" />
+        <option value="$PROJECT_DIR$/HypothesisTesting.py" />
+        <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/LogisticRegressionModel.py" />
+        <option value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/KNN.py" />
+        <option value="$PROJECT_DIR$/Classifiers/Ensemble_Classifiers/EnsembleVoting.py" />
       </list>
     </option>
   </component>
@@ -130,9 +158,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="412" />
-    <option name="y" value="32" />
-    <option name="width" value="1433" />
+    <option name="x" value="519" />
+    <option name="y" value="23" />
+    <option name="width" value="1314" />
     <option name="height" value="1001" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -184,16 +212,6 @@
               <item name="Classifiers" type="462c0819:PsiDirectoryNode" />
               <item name="Supervised_Classifiers" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Heart-Sounds-Deep-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heart-Sounds-Deep-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="Data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Heart-Sounds-Deep-Learning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Heart-Sounds-Deep-Learning" type="462c0819:PsiDirectoryNode" />
-              <item name="Visualization" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -221,7 +239,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2D_PCA">
+  <component name="RunManager" selected="Python.KNN">
     <configuration name="2D_PCA" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -260,7 +278,26 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="ROC" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="LogisticRegressionModel" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Heart-Sounds-Deep-Learning" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/LogisticRegressionModel.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="Project_GUI" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -273,7 +310,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Heart-Sounds-Deep-Learning" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ROC.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Project_GUI.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,39 +335,20 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="naive_bayes" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Heart-Sounds-Deep-Learning" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Classifiers/Supervised_Classifiers/naive_bayes.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.ROC" />
-      <item index="1" class="java.lang.String" itemvalue="Python.naive_bayes" />
-      <item index="2" class="java.lang.String" itemvalue="Python.KNN" />
-      <item index="3" class="java.lang.String" itemvalue="Python.VisualizingNeuralNetworkArchitecture" />
-      <item index="4" class="java.lang.String" itemvalue="Python.2D_PCA" />
+      <item index="0" class="java.lang.String" itemvalue="Python.VisualizingNeuralNetworkArchitecture" />
+      <item index="1" class="java.lang.String" itemvalue="Python.2D_PCA" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Project_GUI" />
+      <item index="3" class="java.lang.String" itemvalue="Python.LogisticRegressionModel" />
+      <item index="4" class="java.lang.String" itemvalue="Python.KNN" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.2D_PCA" />
-        <item index="1" class="java.lang.String" itemvalue="Python.VisualizingNeuralNetworkArchitecture" />
-        <item index="2" class="java.lang.String" itemvalue="Python.ROC" />
-        <item index="3" class="java.lang.String" itemvalue="Python.KNN" />
-        <item index="4" class="java.lang.String" itemvalue="Python.naive_bayes" />
+        <item index="0" class="java.lang.String" itemvalue="Python.KNN" />
+        <item index="1" class="java.lang.String" itemvalue="Python.LogisticRegressionModel" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Project_GUI" />
+        <item index="3" class="java.lang.String" itemvalue="Python.2D_PCA" />
+        <item index="4" class="java.lang.String" itemvalue="Python.VisualizingNeuralNetworkArchitecture" />
       </list>
     </recent_temporary>
   </component>
@@ -360,22 +378,23 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="412" y="32" width="1433" height="1001" extended-state="0" />
+    <frame x="519" y="23" width="1314" height="1001" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34567901" sideWeight="0.2627677" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23138686" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="0" y="0" width="266" height="621" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23076923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="0" y="0" width="266" height="621" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.41611478" sideWeight="0.73723227" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.105960265" sideWeight="0.73723227" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2572432" sideWeight="0.49355432" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2845912" sideWeight="0.49355432" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.77785766" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6273585" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3500374" sideWeight="0.50644565" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30905077" sideWeight="0.49139866" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3500374" sideWeight="0.50644565" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -429,14 +448,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/LogisticRegressionModel.py" />
-    <entry file="file://$PROJECT_DIR$/convertDirectoryToTrainTestData.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45">
-          <caret line="59" column="24" lean-forward="true" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Supervised_Classifiers/LogisticRegressionModel.py" />
     <entry file="file://$PROJECT_DIR$/Supervised_Classifiers/Linear_SVM.py" />
     <entry file="file://$PROJECT_DIR$/Supervised_Classifiers/KNN.py" />
@@ -481,52 +492,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/Linear_SVM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="127" column="75" lean-forward="false" selection-start-line="127" selection-start-column="75" selection-end-line="127" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/LogisticRegressionModel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="126" column="75" lean-forward="false" selection-start-line="126" selection-start-column="75" selection-end-line="126" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/RandomForest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1725">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/naive_bayes.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="66" column="60" lean-forward="true" selection-start-line="66" selection-start-column="60" selection-end-line="66" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/KNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/sklearn/cross_validation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/Gaussian_SVM.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="81" selection-end-column="10" />
         </state>
       </provider>
     </entry>
@@ -633,49 +602,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/DummyClassifier.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="138" column="25" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/decision_tree_classification.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1920">
-          <caret line="130" column="37" lean-forward="false" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/hypertools/tools/load.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Confusion_Matrix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="83" column="60" lean-forward="false" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/Ensemble_Classifiers/EnsembleLearning.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classifiers/DeepLearning_Classifiers/Simple_CNN.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-845">
-          <caret line="68" column="13" lean-forward="true" selection-start-line="68" selection-start-column="13" selection-end-line="68" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -683,9 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -693,7 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,7 +628,103 @@
         <state relative-caret-position="553">
           <caret line="135" column="61" lean-forward="false" selection-start-line="135" selection-start-column="61" selection-end-line="135" selection-end-column="61" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Project_GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="42" lean-forward="true" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/DeepLearning_Classifiers/Simple_CNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1202">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HypothesisTesting.py" />
+    <entry file="file://$PROJECT_DIR$/Confusion_Matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/Gaussian_SVM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/Linear_SVM.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="127" column="75" lean-forward="false" selection-start-line="127" selection-start-column="75" selection-end-line="127" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/naive_bayes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="66" column="60" lean-forward="true" selection-start-line="66" selection-start-column="60" selection-end-line="66" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/RandomForest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/decision_tree_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/DummyClassifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="138" column="25" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/LogisticRegressionModel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="98" column="18" lean-forward="true" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/Supervised_Classifiers/KNN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classifiers/Ensemble_Classifiers/EnsembleVoting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
